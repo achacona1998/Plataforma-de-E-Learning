@@ -1,0 +1,253 @@
+# ===================================
+# GITIGNORE PRINCIPAL - E-LEARNING PLATFORM
+# ===================================
+
+# ===================================
+# ARCHIVOS DE SISTEMA
+# ===================================
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ===================================
+# EDITORES E IDEs
+# ===================================
+
+# Visual Studio Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# JetBrains IDEs
+.idea/
+*.swp
+*.swo
+*~
+
+# Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+
+# Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# ===================================
+# VARIABLES DE ENTORNO Y CONFIGURACIÓN
+# ===================================
+
+# Variables de entorno
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+
+# Configuración local
+config.local.js
+config.local.json
+
+# ===================================
+# LOGS Y ARCHIVOS TEMPORALES
+# ===================================
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Archivos temporales
+*.tmp
+*.temp
+.cache/
+.temp/
+
+# ===================================
+# DEPENDENCIAS Y BUILDS
+# ===================================
+
+# Node modules (se ignoran en subdirectorios también)
+node_modules/
+*/node_modules/
+**/node_modules/
+
+# Builds de producción
+dist/
+build/
+*/dist/
+*/build/
+
+# ===================================
+# DOCKER Y CONTENEDORES
+# ===================================
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+.docker/
+
+# ===================================
+# BASE DE DATOS Y BACKUPS
+# ===================================
+
+# MongoDB
+*.mongodb
+*.db
+
+# Backups
+*.backup
+*.bak
+*.sql
+*.dump
+
+# ===================================
+# ARCHIVOS DE CERTIFICADOS Y UPLOADS
+# ===================================
+
+# Certificados generados (mantener estructura de carpetas)
+backend/uploads/certificates/*.pdf
+!backend/uploads/certificates/.gitkeep
+
+# Uploads de usuarios
+backend/uploads/avatars/*
+!backend/uploads/avatars/.gitkeep
+backend/uploads/courses/*
+!backend/uploads/courses/.gitkeep
+backend/uploads/content/*
+!backend/uploads/content/.gitkeep
+
+# ===================================
+# TESTING Y COVERAGE
+# ===================================
+
+# Coverage reports
+coverage/
+*.lcov
+.nyc_output/
+
+# Test results
+test-results/
+junit.xml
+
+# ===================================
+# DOCUMENTACIÓN GENERADA
+# ===================================
+
+# Documentación auto-generada
+docs/generated/
+api-docs/
+
+# ===================================
+# ARCHIVOS DE DESARROLLO
+# ===================================
+
+# Archivos de notas personales
+TODO.md
+NOTES.md
+*.notes
+.scratch/
+
+# Archivos de prueba temporal
+test-file.*
+temp.*
+playground.*
+
+# ===================================
+# DEPLOYMENT Y CI/CD
+# ===================================
+
+# Deployment
+.vercel/
+.netlify/
+.firebase/
+
+# CI/CD
+.github/workflows/secrets.yml
+
+# ===================================
+# ARCHIVOS ESPECÍFICOS DEL PROYECTO
+# ===================================
+
+# Archivos de diseño grandes
+*.psd
+*.ai
+*.sketch
+*.fig
+
+# Videos y archivos multimedia grandes
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.flv
+*.webm
+
+# Archivos de Office temporales
+~$*
+
+# ===================================
+# SEGURIDAD
+# ===================================
+
+# Claves y certificados
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cer
+*.der
+
+# Archivos de configuración con secretos
+secrets.json
+credentials.json
+service-account.json

@@ -1,0 +1,256 @@
+version: '3.8'
+
+services:
+  # ==============================================
+  # FRONTEND SERVICE
+  # ==============================================
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.prod
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./ssl:/etc/ssl/certs:ro
+    depends_on:
+      - backend
+    restart: unless-stopped
+    networks:
+      - app-network
+
+  # ==============================================
+  # BACKEND SERVICE
+  # ==============================================
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.prod
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=production
+      - PORT=5000
+      - MONGODB_URI=${MONGODB_URI}
+      - JWT_SECRET=${JWT_SECRET}
+      - JWT_EXPIRES_IN=${JWT_EXPIRES_IN}
+      - STRIPE_SECRET_KEY=${STRIPE_SECRET_KEY}
+      - STRIPE_WEBHOOK_SECRET=${STRIPE_WEBHOOK_SECRET}
+      - SMTP_HOST=${SMTP_HOST}
+      - SMTP_PORT=${SMTP_PORT}
+      - SMTP_USER=${SMTP_USER}
+      - SMTP_PASS=${SMTP_PASS}
+      - FROM_EMAIL=${FROM_EMAIL}
+      - CORS_ORIGIN=${CORS_ORIGIN}
+      - REDIS_URL=redis://redis:6379
+    volumes:
+      - ./backend/uploads:/app/uploads
+      - ./backend/logs:/app/logs
+      - ./backend/certificates:/app/certificates
+    depends_on:
+      - mongodb
+      - redis
+    restart: unless-stopped
+    networks:
+      - app-network
+
+  # ==============================================
+  # MONGODB SERVICE
+  # ==============================================
+  mongodb:
+    image: mongo:6.0
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_ROOT_USERNAME}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_ROOT_PASSWORD}
+      - MONGO_INITDB_DATABASE=elearning-platform
+    volumes:
+      - mongodb_data:/data/db
+      - ./mongodb/init:/docker-entrypoint-initdb.d:ro
+    restart: unless-stopped
+    networks:
+      - app-network
+
+  # ==============================================
+  # REDIS SERVICE (CACHE Y SESIONES)
+  # ==============================================
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    command: redis-server --requirepass ${REDIS_PASSWORD}
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+    networks:
+      - app-network
+
+  # ==============================================
+  # NGINX REVERSE PROXY
+  # ==============================================
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./ssl:/etc/ssl/certs:ro
+      - ./frontend/build:/usr/share/nginx/html:ro
+    depends_on:
+      - frontend
+      - backend
+    restart: unless-stopped
+    networks:
+      - app-network
+
+  # ==============================================
+  # CERTBOT PARA SSL
+  # ==============================================
+  certbot:
+    image: certbot/certbot
+    volumes:
+      - ./ssl:/etc/letsencrypt
+      - ./frontend/build:/var/www/html
+    command: certonly --webroot --webroot-path=/var/www/html --email ${SSL_EMAIL} --agree-tos --no-eff-email -d ${DOMAIN} -d www.${DOMAIN}
+    networks:
+      - app-network
+
+  # ==============================================
+  # MONITORING CON PROMETHEUS
+  # ==============================================
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--storage.tsdb.retention.time=200h'
+      - '--web.enable-lifecycle'
+    restart: unless-stopped
+    networks:
+      - app-network
+
+  # ==============================================
+  # GRAFANA PARA VISUALIZACIÓN
+  # ==============================================
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3001:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD}
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./monitoring/grafana/dashboards:/etc/grafana/provisioning/dashboards:ro
+      - ./monitoring/grafana/datasources:/etc/grafana/provisioning/datasources:ro
+    restart: unless-stopped
+    networks:
+      - app-network
+
+  # ==============================================
+  # BACKUP SERVICE
+  # ==============================================
+  backup:
+    build:
+      context: ./scripts
+      dockerfile: Dockerfile.backup
+    environment:
+      - MONGODB_URI=${MONGODB_URI}
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_S3_BUCKET=${BACKUP_S3_BUCKET}
+      - BACKUP_SCHEDULE=${BACKUP_SCHEDULE:-0 2 * * *}
+    volumes:
+      - ./backups:/app/backups
+    depends_on:
+      - mongodb
+    restart: unless-stopped
+    networks:
+      - app-network
+
+# ==============================================
+# VOLUMES PERSISTENTES
+# ==============================================
+volumes:
+  mongodb_data:
+    driver: local
+  redis_data:
+    driver: local
+  prometheus_data:
+    driver: local
+  grafana_data:
+    driver: local
+
+# ==============================================
+# NETWORK CONFIGURATION
+# ==============================================
+networks:
+  app-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
+
+# ==============================================
+# CONFIGURACIÓN DE HEALTHCHECKS
+# ==============================================
+# Los healthchecks se pueden agregar a cada servicio:
+# healthcheck:
+#   test: ["CMD", "curl", "-f", "http://localhost:5000/api/health"]
+#   interval: 30s
+#   timeout: 10s
+#   retries: 3
+#   start_period: 40s
+
+# ==============================================
+# COMANDOS ÚTILES
+# ==============================================
+# Iniciar en producción:
+# docker-compose -f docker-compose.prod.yml up -d
+#
+# Ver logs:
+# docker-compose -f docker-compose.prod.yml logs -f [service_name]
+#
+# Escalar servicios:
+# docker-compose -f docker-compose.prod.yml up -d --scale backend=3
+#
+# Backup manual:
+# docker-compose -f docker-compose.prod.yml exec backup /app/backup.sh
+#
+# Restaurar backup:
+# docker-compose -f docker-compose.prod.yml exec backup /app/restore.sh [backup_file]
+#
+# Renovar certificados SSL:
+# docker-compose -f docker-compose.prod.yml run --rm certbot renew
+#
+# Actualizar servicios:
+# docker-compose -f docker-compose.prod.yml pull
+# docker-compose -f docker-compose.prod.yml up -d
+
+# ==============================================
+# VARIABLES DE ENTORNO REQUERIDAS
+# ==============================================
+# Crear archivo .env.prod con:
+# MONGODB_URI=mongodb://username:password@mongodb:27017/elearning-platform
+# MONGO_ROOT_USERNAME=admin
+# MONGO_ROOT_PASSWORD=secure_password
+# JWT_SECRET=your_super_secure_jwt_secret
+# STRIPE_SECRET_KEY=sk_live_your_stripe_secret
+# REDIS_PASSWORD=secure_redis_password
+# DOMAIN=yourdomain.com
+# SSL_EMAIL=admin@yourdomain.com
+# GRAFANA_PASSWORD=secure_grafana_password
+# AWS_ACCESS_KEY_ID=your_aws_key
+# AWS_SECRET_ACCESS_KEY=your_aws_secret
+# BACKUP_S3_BUCKET=your-backup-bucket

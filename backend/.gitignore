@@ -1,0 +1,213 @@
+# ===================================
+# GITIGNORE BACKEND - NODE.JS/EXPRESS
+# ===================================
+
+# ===================================
+# DEPENDENCIAS
+# ===================================
+
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Package manager lock files (mantener solo uno)
+# Descomenta el que uses:
+# package-lock.json  # Si usas npm
+# yarn.lock          # Si usas yarn
+# pnpm-lock.yaml     # Si usas pnpm
+
+# ===================================
+# VARIABLES DE ENTORNO
+# ===================================
+
+# Variables de entorno
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env.*.local
+
+# Configuración local
+config/local.js
+config/local.json
+
+# ===================================
+# LOGS
+# ===================================
+
+# Logs de aplicación
+logs/
+*.log
+combined.log
+error.log
+access.log
+
+# Logs de PM2
+.pm2/
+
+# ===================================
+# UPLOADS Y ARCHIVOS GENERADOS
+# ===================================
+
+# Uploads de usuarios (mantener estructura)
+uploads/avatars/*
+!uploads/avatars/.gitkeep
+
+uploads/courses/*
+!uploads/courses/.gitkeep
+
+uploads/content/*
+!uploads/content/.gitkeep
+
+# Certificados generados
+uploads/certificates/*.pdf
+!uploads/certificates/.gitkeep
+
+# Archivos temporales de uploads
+uploads/temp/*
+!uploads/temp/.gitkeep
+
+# ===================================
+# BASE DE DATOS
+# ===================================
+
+# Archivos de base de datos local
+*.db
+*.sqlite
+*.sqlite3
+
+# Dumps de MongoDB
+*.mongodb
+*.bson
+dumps/
+
+# ===================================
+# TESTING
+# ===================================
+
+# Coverage reports
+coverage/
+.nyc_output/
+*.lcov
+
+# Test databases
+test.db
+test.sqlite
+
+# ===================================
+# CACHE Y TEMPORALES
+# ===================================
+
+# Cache
+.cache/
+.tmp/
+tmp/
+
+# Sessions
+sessions/
+
+# ===================================
+# DOCUMENTACIÓN GENERADA
+# ===================================
+
+# API Documentation
+docs/generated/
+api-docs/build/
+
+# ===================================
+# DESARROLLO
+# ===================================
+
+# Archivos de desarrollo
+.vscode/
+.idea/
+
+# Archivos de notas
+TODO.md
+NOTES.md
+*.notes
+
+# ===================================
+# DEPLOYMENT
+# ===================================
+
+# Build artifacts
+dist/
+build/
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# ===================================
+# SEGURIDAD
+# ===================================
+
+# Claves privadas
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Certificados SSL
+ssl/
+certs/
+
+# Archivos de configuración con secretos
+secrets.json
+credentials.json
+service-account-key.json
+
+# ===================================
+# HERRAMIENTAS DE DESARROLLO
+# ===================================
+
+# Nodemon
+.nodemonignore
+
+# ESLint cache
+.eslintcache
+
+# Prettier
+.prettierignore
+
+# ===================================
+# SISTEMA OPERATIVO
+# ===================================
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# ===================================
+# ESPECÍFICO DEL PROYECTO
+# ===================================
+
+# Archivos de migración temporal
+migrations/temp/
+
+# Scripts de desarrollo
+scripts/dev/
+scripts/local/
+
+# Backups
+backups/
+*.backup
+*.bak
