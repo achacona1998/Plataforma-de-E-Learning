@@ -36,7 +36,7 @@ const LoadingSpinner = ({
 
   return (
     <div className={containerClasses}>
-      <div className="text-center">
+      <div className="text-center" role="status" aria-label={text}>
         <svg
           className={`animate-spin ${sizeClasses[size]} ${colorClasses[color]} mx-auto`}
           xmlns="http://www.w3.org/2000/svg"

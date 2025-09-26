@@ -1,0 +1,41 @@
+{
+  "name": "elearning-tests",
+  "version": "1.0.0",
+  "description": "Suite de tests para la plataforma de E-Learning",
+  "main": "run-tests.js",
+  "scripts": {
+    "test": "node run-tests.js",
+    "test:backend": "node run-tests.js backend",
+    "test:frontend": "node run-tests.js frontend",
+    "test:all": "node run-tests.js all",
+    "test:watch": "node run-tests.js all watch",
+    "test:coverage": "node run-tests.js all coverage",
+    "test:backend:watch": "node run-tests.js backend watch",
+    "test:frontend:watch": "node run-tests.js frontend watch",
+    "test:backend:coverage": "node run-tests.js backend coverage",
+    "test:frontend:coverage": "node run-tests.js frontend coverage",
+    "install:all": "npm run install:backend && npm run install:frontend",
+    "install:backend": "cd backend && npm install",
+    "install:frontend": "cd frontend && npm install",
+    "clean": "npm run clean:backend && npm run clean:frontend",
+    "clean:backend": "cd backend && rm -rf node_modules coverage",
+    "clean:frontend": "cd frontend && rm -rf node_modules coverage",
+    "help": "node run-tests.js --help"
+  },
+  "keywords": [
+    "testing",
+    "jest",
+    "vitest",
+    "e-learning",
+    "backend",
+    "frontend"
+  ],
+  "author": "E-Learning Platform Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}

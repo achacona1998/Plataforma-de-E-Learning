@@ -1,0 +1,31 @@
+{
+  "name": "backend-tests",
+  "version": "1.0.0",
+  "description": "Tests automatizados para el backend de la plataforma de e-learning",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:models": "jest tests/unit/models",
+    "test:controllers": "jest tests/unit/controllers",
+    "test:integration": "jest tests/integration",
+    "test:all": "jest --coverage --verbose"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^6.3.3",
+    "@types/jest": "^29.5.8",
+    "mongoose": "^8.13.0",
+    "bcryptjs": "^3.0.2",
+    "express": "^4.21.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "jest": {
+    "testMatch": ["<rootDir>/tests/unit/**/*.test.js"],
+    "testEnvironment": "node",
+    "setupFilesAfterEnv": ["<rootDir>/tests/setup.js"]
+  }
+}

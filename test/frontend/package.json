@@ -1,0 +1,30 @@
+{
+  "name": "frontend-tests",
+  "version": "1.0.0",
+  "description": "Tests para el frontend de la plataforma de e-learning",
+  "type": "module",
+  "scripts": {
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "test:coverage": "vitest --coverage",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.5.1",
+    "@vitejs/plugin-react": "^4.1.1",
+    "@vitest/coverage-v8": "^1.0.4",
+    "@vitest/ui": "^1.0.4",
+    "jsdom": "^23.0.1",
+    "msw": "^2.0.8",
+    "vitest": "^1.0.4",
+    "vitest-canvas-mock": "^0.3.3"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.0"
+  }
+}
