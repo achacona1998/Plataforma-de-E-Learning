@@ -1,7 +1,12 @@
 # Análisis y Diseño de Sistema de Plataforma E-Learning
 
 ## Ver Historias de Usuario
+
 https://github.com/users/achacona1998/projects/11/views/1
+
+## Ver Pantallas
+
+https://github.com/achacona1998/Plataforma-de-E-Learning/tree/main/analisis/Dise%C3%B1o
 
 ## Introducción
 
@@ -21,9 +26,11 @@ En el ámbito educativo actual, las instituciones y emprendedores enfrentan desa
 ### Objetivos del Proyecto
 
 #### Objetivo General
+
 Diseñar y especificar una plataforma de e-learning completa que permita a los instructores crear y gestionar cursos de manera eficiente, mientras proporciona a los estudiantes una experiencia de aprendizaje estructurada con seguimiento de progreso y certificaciones, todo gestionado desde un panel administrativo integral.
 
 #### Objetivos Específicos
+
 1. **Diseñar una arquitectura escalable** basada en Node.js/Express y React con MongoDB
 2. **Especificar un sistema de autenticación seguro** con roles diferenciados (estudiante/instructor/administrador)
 3. **Definir interfaces de usuario intuitivas** optimizadas para la experiencia de aprendizaje
@@ -34,6 +41,7 @@ Diseñar y especificar una plataforma de e-learning completa que permita a los i
 ### Alcance del Sistema
 
 #### Funcionalidades Incluidas
+
 - Catálogo de cursos con categorías educativas (programación, diseño, marketing, negocios, idiomas, etc.)
 - Sistema de inscripciones y pagos integrados (Stripe, PayPal)
 - Gestión completa de contenido educativo (videos, documentos, quizzes)
@@ -46,6 +54,7 @@ Diseñar y especificar una plataforma de e-learning completa que permita a los i
 - Analytics y reportes de rendimiento educativo
 
 #### Funcionalidades Excluidas (Fase 1)
+
 - Videoconferencias en vivo integradas
 - Sistema de mensajería entre usuarios
 - Foros de discusión por curso
@@ -58,6 +67,7 @@ Diseñar y especificar una plataforma de e-learning completa que permita a los i
 ### Requisitos Funcionales
 
 #### RF01 - Sistema de Autenticación y Autorización
+
 - **RF01.1**: El sistema debe permitir el registro de nuevos usuarios con validación de email
 - **RF01.2**: El sistema debe autenticar usuarios mediante email y contraseña
 - **RF01.3**: El sistema debe implementar roles diferenciados (estudiante, instructor, administrador)
@@ -66,6 +76,7 @@ Diseñar y especificar una plataforma de e-learning completa que permita a los i
 - **RF01.6**: El sistema debe cerrar sesiones automáticamente por inactividad
 
 #### RF02 - Gestión de Usuarios y Perfiles
+
 - **RF02.1**: Los administradores deben poder gestionar cuentas de usuarios
 - **RF02.2**: Los usuarios deben poder actualizar su información personal y perfil
 - **RF02.3**: El sistema debe permitir la gestión de información académica y profesional
@@ -74,6 +85,7 @@ Diseñar y especificar una plataforma de e-learning completa que permita a los i
 - **RF02.6**: Los instructores deben poder gestionar su perfil profesional y especialidades
 
 #### RF03 - Catálogo de Cursos
+
 - **RF03.1**: El sistema debe mostrar cursos organizados por categorías (programación, diseño, marketing, negocios, idiomas, ciencias, arte, música)
 - **RF03.2**: Cada curso debe mostrar información detallada (descripción, instructor, duración, precio, nivel)
 - **RF03.3**: Los cursos deben incluir objetivos de aprendizaje, requisitos previos y contenido del programa
@@ -81,6 +93,7 @@ Diseñar y especificar una plataforma de e-learning completa que permita a los i
 - **RF03.5**: El sistema debe implementar búsqueda de cursos por nombre, instructor o contenido
 
 #### RF04 - Gestión de Cursos (Instructores)
+
 - **RF04.1**: Los instructores deben poder crear, editar y eliminar sus cursos
 - **RF04.2**: El sistema debe permitir la gestión de contenido multimedia (videos, documentos, imágenes)
 - **RF04.3**: Los instructores deben poder estructurar cursos en módulos y lecciones
@@ -88,6 +101,7 @@ Diseñar y especificar una plataforma de e-learning completa que permita a los i
 - **RF04.5**: El sistema debe permitir establecer precios y configuraciones de acceso
 
 #### RF05 - Sistema de Inscripciones y Pagos
+
 - **RF05.1**: Los estudiantes deben poder inscribirse en cursos de su interés
 - **RF05.2**: El sistema debe procesar pagos mediante Stripe y PayPal
 - **RF05.3**: Los estudiantes deben poder ver el historial de sus inscripciones y pagos
@@ -96,6 +110,7 @@ Diseñar y especificar una plataforma de e-learning completa que permita a los i
 - **RF05.6**: El sistema debe manejar diferentes monedas (USD, EUR, MXN, COP, ARS)
 
 #### RF06 - Seguimiento de Progreso de Aprendizaje
+
 - **RF06.1**: El sistema debe registrar el progreso de cada estudiante por curso
 - **RF06.2**: Los estudiantes deben poder ver su avance en tiempo real
 - **RF06.3**: El sistema debe calcular porcentajes de completitud por módulo y curso
@@ -103,6 +118,7 @@ Diseñar y especificar una plataforma de e-learning completa que permita a los i
 - **RF06.5**: El sistema debe mantener estadísticas de tiempo de estudio y actividad
 
 #### RF07 - Sistema de Evaluación (Quizzes)
+
 - **RF07.1**: Los instructores deben poder crear quizzes con múltiples tipos de preguntas
 - **RF07.2**: El sistema debe soportar preguntas de opción múltiple, verdadero/falso y respuesta abierta
 - **RF07.3**: Los quizzes deben tener configuraciones de tiempo límite e intentos permitidos
@@ -111,6 +127,7 @@ Diseñar y especificar una plataforma de e-learning completa que permita a los i
 - **RF07.6**: Los instructores deben poder revisar y calificar respuestas abiertas
 
 #### RF08 - Panel Administrativo
+
 - **RF08.1**: El sistema debe proporcionar un dashboard con estadísticas de la plataforma
 - **RF08.2**: Los administradores deben poder gestionar usuarios, cursos e instructores
 - **RF08.3**: El panel debe mostrar reportes de inscripciones y ingresos
@@ -118,6 +135,7 @@ Diseñar y especificar una plataforma de e-learning completa que permita a los i
 - **RF08.5**: Los administradores deben poder moderar contenido y resolver disputas
 
 #### RF09 - Gestión de Contenido Multimedia
+
 - **RF09.1**: El sistema debe permitir la carga de videos, documentos e imágenes
 - **RF09.2**: Los archivos multimedia deben optimizarse automáticamente para streaming
 - **RF09.3**: El sistema debe generar previsualizaciones y thumbnails automáticamente
@@ -126,6 +144,7 @@ Diseñar y especificar una plataforma de e-learning completa que permita a los i
 - **RF09.6**: El contenido debe estar protegido contra descarga no autorizada
 
 #### RF10 - Reportes y Analíticas
+
 - **RF10.1**: El sistema debe generar reportes de progreso académico por estudiante
 - **RF10.2**: Los instructores deben poder ver estadísticas de sus cursos
 - **RF10.3**: El sistema debe mostrar métricas de engagement y retención
@@ -133,6 +152,7 @@ Diseñar y especificar una plataforma de e-learning completa que permita a los i
 - **RF10.5**: El sistema debe proporcionar analíticas de ingresos y tendencias de inscripción
 
 #### RF11 - Sistema de Comunicación
+
 - **RF11.1**: El sistema debe permitir mensajería entre estudiantes e instructores
 - **RF11.2**: Los cursos deben incluir foros de discusión por módulo
 - **RF11.3**: El sistema debe enviar notificaciones por email sobre actividades importantes
@@ -140,6 +160,7 @@ Diseñar y especificar una plataforma de e-learning completa que permita a los i
 - **RF11.5**: El sistema debe soportar comentarios y preguntas en las lecciones
 
 #### RF12 - Certificaciones y Logros
+
 - **RF12.1**: El sistema debe generar certificados de finalización automáticamente
 - **RF12.2**: Los certificados deben incluir información verificable del curso
 - **RF12.3**: Los estudiantes deben poder descargar y compartir sus certificados
@@ -149,6 +170,7 @@ Diseñar y especificar una plataforma de e-learning completa que permita a los i
 ### Requisitos No Funcionales
 
 #### RNF01 - Rendimiento
+
 - **RNF01.1**: El tiempo de respuesta de la aplicación no debe exceder 2 segundos
 - **RNF01.2**: El sistema debe soportar al menos 500 usuarios concurrentes
 - **RNF01.3**: Los videos deben comenzar a reproducirse en menos de 3 segundos
@@ -157,6 +179,7 @@ Diseñar y especificar una plataforma de e-learning completa que permita a los i
 - **RNF01.6**: Las páginas de cursos deben cargar completamente en menos de 4 segundos
 
 #### RNF02 - Escalabilidad
+
 - **RNF02.1**: La arquitectura debe permitir escalamiento horizontal para manejar crecimiento
 - **RNF02.2**: El sistema debe ser modular para facilitar la adición de nuevas funcionalidades
 - **RNF02.3**: La base de datos debe diseñarse para soportar millones de registros de progreso
@@ -165,6 +188,7 @@ Diseñar y especificar una plataforma de e-learning completa que permita a los i
 - **RNF02.6**: La infraestructura debe soportar distribución geográfica de contenido
 
 #### RNF03 - Seguridad
+
 - **RNF03.1**: Las contraseñas deben almacenarse con hashing seguro (bcrypt)
 - **RNF03.2**: El sistema debe implementar autenticación JWT con expiración y refresh tokens
 - **RNF03.3**: Todas las comunicaciones deben usar HTTPS en producción
@@ -175,6 +199,7 @@ Diseñar y especificar una plataforma de e-learning completa que permita a los i
 - **RNF03.8**: El sistema debe protegerse contra ataques comunes (XSS, CSRF, SQL Injection)
 
 #### RNF04 - Usabilidad
+
 - **RNF04.1**: La interfaz debe ser intuitiva y accesible para usuarios de diferentes niveles técnicos
 - **RNF04.2**: El sistema debe ser responsivo para dispositivos móviles, tablets y desktop
 - **RNF04.3**: Los formularios deben incluir validación en tiempo real con mensajes claros
@@ -183,6 +208,7 @@ Diseñar y especificar una plataforma de e-learning completa que permita a los i
 - **RNF04.6**: El sistema debe cumplir con estándares de accesibilidad web (WCAG 2.1)
 
 #### RNF05 - Disponibilidad
+
 - **RNF05.1**: El sistema debe tener un uptime del 99.5% o superior
 - **RNF05.2**: El sistema debe manejar errores de forma elegante sin perder progreso del estudiante
 - **RNF05.3**: Debe implementarse un sistema de logs completo para debugging y auditoría
@@ -191,6 +217,7 @@ Diseñar y especificar una plataforma de e-learning completa que permita a los i
 - **RNF05.6**: El contenido debe estar disponible offline para estudiantes móviles
 
 #### RNF06 - Mantenibilidad
+
 - **RNF06.1**: El código debe estar bien documentado con comentarios y documentación técnica
 - **RNF06.2**: El sistema debe seguir estándares de codificación y mejores prácticas
 - **RNF06.3**: Debe implementarse un conjunto completo de pruebas automatizadas (unitarias, integración)
@@ -205,7 +232,9 @@ Diseñar y especificar una plataforma de e-learning completa que permita a los i
 El sistema seguirá una **arquitectura de 3 capas** con separación clara de responsabilidades, implementando patrones modernos de desarrollo web para plataformas educativas:
 
 #### Capa de Presentación (Frontend)
+
 **Frontend Estudiantes e Instructores**
+
 - **Tecnología**: React 19+ con hooks y componentes funcionales
 - **Bundler**: Vite para desarrollo rápido y optimización de build
 - **Routing**: React Router DOM para navegación SPA
@@ -216,6 +245,7 @@ El sistema seguirá una **arquitectura de 3 capas** con separación clara de res
 - **Reproductor**: Video.js o similar para reproducción de contenido multimedia
 
 **Frontend Administrativo (Admin Panel)**
+
 - **Tecnología**: React 19+ con componentes especializados para administración
 - **UI Framework**: Componentes personalizados con Tailwind CSS
 - **Gestión de Estado**: Context API para estado de administración
@@ -224,6 +254,7 @@ El sistema seguirá una **arquitectura de 3 capas** con separación clara de res
 - **Gráficos**: Chart.js o Recharts para analíticas y reportes
 
 #### Capa de Lógica de Negocio (Backend)
+
 - **Framework**: Node.js con Express.js para API REST
 - **Arquitectura**: MVC (Model-View-Controller) con separación de responsabilidades
 - **Autenticación**: JWT (JSON Web Tokens) con refresh tokens
@@ -234,6 +265,7 @@ El sistema seguirá una **arquitectura de 3 capas** con separación clara de res
 - **Archivos**: Multer para manejo de uploads de contenido multimedia
 
 #### Capa de Datos (Base de Datos)
+
 - **Motor Principal**: MongoDB con Mongoose ODM
 - **Esquemas**: Mongoose schemas para usuarios, cursos, quizzes y pagos
 - **Índices**: Optimizados para consultas de progreso, cursos y calificaciones
@@ -244,6 +276,7 @@ El sistema seguirá una **arquitectura de 3 capas** con separación clara de res
 ### Patrones de Diseño Implementados
 
 #### Backend (Node.js/Express)
+
 - **MVC Pattern**: Separación clara entre modelos, controladores y rutas
 - **Repository Pattern**: Abstracción de acceso a datos con Mongoose
 - **Middleware Pattern**: Express middleware para autenticación, validación y logging
@@ -252,6 +285,7 @@ El sistema seguirá una **arquitectura de 3 capas** con separación clara de res
 - **Observer Pattern**: Para notificaciones y eventos del sistema
 
 #### Frontend (React)
+
 - **Component Pattern**: Componentes React reutilizables y modulares
 - **Hook Pattern**: Hooks personalizados para lógica de aprendizaje y progreso
 - **Context Pattern**: Context providers para estado de usuario y progreso
@@ -262,6 +296,7 @@ El sistema seguirá una **arquitectura de 3 capas** con separación clara de res
 ### Comunicación Entre Capas
 
 #### API RESTful
+
 - **Base URL**: `http://localhost:5000/api/v1/`
 - **Formato**: JSON para requests y responses
 - **Autenticación**: JWT Bearer Token con refresh tokens
@@ -270,12 +305,14 @@ El sistema seguirá una **arquitectura de 3 capas** con separación clara de res
 - **Filtrado**: Query parameters para filtros de cursos y búsquedas
 
 #### Flujo de Datos
+
 1. **Frontend → Backend**: Requests HTTP con autenticación JWT
 2. **Backend → Base de Datos**: Mongoose queries optimizadas con agregaciones
 3. **Base de Datos → Backend**: Documentos MongoDB estructurados
 4. **Backend → Frontend**: Responses JSON con datos de cursos y progreso
 
 #### Endpoints Principales
+
 - **Autenticación**: `/auth/login`, `/auth/register`, `/auth/refresh`
 - **Usuarios**: `/users/profile`, `/users/progress`, `/users/enrollments`
 - **Cursos**: `/courses`, `/courses/:id`, `/courses/:id/enroll`
@@ -286,6 +323,7 @@ El sistema seguirá una **arquitectura de 3 capas** con separación clara de res
 ### Estructura de Directorios
 
 #### Backend (Node.js/Express)
+
 ```
 backend/
 ├── controllers/            # Controladores de la API
@@ -325,6 +363,7 @@ backend/
 ```
 
 #### Frontend (React)
+
 ```
 frontend/
 ├── src/
@@ -372,6 +411,7 @@ La base de datos utilizará MongoDB con las siguientes colecciones principales:
 #### Colecciones Principales
 
 **users (Usuarios del Sistema)**
+
 ```javascript
 {
   _id: ObjectId,
@@ -405,6 +445,7 @@ La base de datos utilizará MongoDB con las siguientes colecciones principales:
 ```
 
 **cursos (Cursos)**
+
 ```javascript
 {
   _id: ObjectId,
@@ -437,6 +478,7 @@ La base de datos utilizará MongoDB con las siguientes colecciones principales:
 ```
 
 **contenidos (Contenido de Cursos)**
+
 ```javascript
 {
   _id: ObjectId,
@@ -452,10 +494,10 @@ La base de datos utilizará MongoDB con las siguientes colecciones principales:
     video_url: String,
     subtitulos_url: String,
     calidad: [String], // ['720p', '1080p']
-    
+
     // Para texto
     texto_html: String,
-    
+
     // Para archivos
     archivo_url: String,
     tipo_archivo: String,
@@ -472,6 +514,7 @@ La base de datos utilizará MongoDB con las siguientes colecciones principales:
 ```
 
 **quizzes (Evaluaciones)**
+
 ```javascript
 {
   _id: ObjectId,
@@ -498,6 +541,7 @@ La base de datos utilizará MongoDB con las siguientes colecciones principales:
 ```
 
 **inscripciones (Inscripciones de Estudiantes)**
+
 ```javascript
 {
   _id: ObjectId,
@@ -516,6 +560,7 @@ La base de datos utilizará MongoDB con las siguientes colecciones principales:
 ```
 
 **progreso_contenido (Progreso por Contenido)**
+
 ```javascript
 {
   _id: ObjectId,
@@ -533,7 +578,8 @@ La base de datos utilizará MongoDB con las siguientes colecciones principales:
 ```
 
 **pagos (Pagos y Transacciones)**
-```javascript
+
+````javascript
 {
   _id: ObjectId,
   estudiante_id: ObjectId, // ref: 'users', required
@@ -617,9 +663,10 @@ db.pagos.createIndex({ "curso_id": 1 })
 db.pagos.createIndex({ "estado": 1 })
 db.pagos.createIndex({ "transaction_id": 1 }, { unique: true })
 db.pagos.createIndex({ "fecha_pago": -1 })
-```
+````
 
 #### Validaciones y Restricciones
+
 1. **Usuarios**: Email único, roles válidos, estados válidos
 2. **Cursos**: Precio mínimo 0, duración mínima 1 hora, calificación entre 0-5
 3. **Contenidos**: Orden único por curso, tipos válidos
@@ -629,31 +676,31 @@ db.pagos.createIndex({ "fecha_pago": -1 })
 7. **Pagos**: Monto mínimo 0, transaction_id único
 
 #### Middleware y Hooks de Mongoose
+
 ```javascript
 // Pre-save para cursos - actualizar fecha de modificación
-cursoSchema.pre('save', function(next) {
+cursoSchema.pre("save", function (next) {
   this.fecha_actualizacion = new Date();
   next();
 });
 
 // Pre-save para pagos - actualizar fecha de pago cuando se completa
-pagoSchema.pre('save', function(next) {
-  if (this.isModified('estado') && this.estado === 'completado') {
+pagoSchema.pre("save", function (next) {
+  if (this.isModified("estado") && this.estado === "completado") {
     this.fecha_pago = new Date();
   }
   next();
 });
 
 // Post-save para inscripciones - actualizar contador de estudiantes
-inscripcionSchema.post('save', async function() {
-  const count = await this.constructor.countDocuments({ 
-    curso_id: this.curso_id, 
-    estado: 'activo' 
+inscripcionSchema.post("save", async function () {
+  const count = await this.constructor.countDocuments({
+    curso_id: this.curso_id,
+    estado: "activo",
   });
-  await mongoose.model('Curso').findByIdAndUpdate(
-    this.curso_id, 
-    { total_estudiantes: count }
-  );
+  await mongoose
+    .model("Curso")
+    .findByIdAndUpdate(this.curso_id, { total_estudiantes: count });
 });
 ```
 
@@ -662,16 +709,19 @@ inscripcionSchema.post('save', async function() {
 ### Estructura General de la API
 
 #### Base URL
+
 ```
 http://localhost:3000/api/v1
 ```
 
 #### Autenticación
+
 - **Tipo**: JWT Bearer Token
 - **Header**: `Authorization: Bearer {token}`
 - **Duración**: 24 horas (access token), 7 días (refresh token)
 
 #### Formato de Respuestas Exitosas
+
 ```json
 {
   "success": true,
@@ -688,6 +738,7 @@ http://localhost:3000/api/v1
 ```
 
 #### Formato de Errores
+
 ```json
 {
   "success": false,
@@ -708,8 +759,10 @@ http://localhost:3000/api/v1
 ### Endpoints de Autenticación
 
 #### POST /auth/register
+
 **Descripción**: Registro de nuevo usuario
 **Body**:
+
 ```json
 {
   "nombre": "string",
@@ -720,55 +773,69 @@ http://localhost:3000/api/v1
   "rol": "estudiante|instructor"
 }
 ```
+
 **Response**: Usuario creado + tokens de autenticación
 
 #### POST /auth/login
+
 **Descripción**: Inicio de sesión
 **Body**:
+
 ```json
 {
   "email": "string",
   "password": "string"
 }
 ```
+
 **Response**: Tokens de autenticación + datos del usuario
 
 #### POST /auth/refresh
+
 **Descripción**: Renovar access token
 **Body**:
+
 ```json
 {
   "refreshToken": "string"
 }
 ```
+
 **Response**: Nuevo access token
 
 #### POST /auth/logout
+
 **Descripción**: Cierre de sesión
 **Headers**: Authorization: Bearer {token}
 **Response**: Confirmación de logout
 
 #### POST /auth/forgot-password
+
 **Descripción**: Solicitar restablecimiento de contraseña
 **Body**:
+
 ```json
 {
   "email": "string"
 }
 ```
+
 **Response**: Confirmación de envío de email
 
 ### Endpoints de Usuarios
 
 #### GET /users/profile
+
 **Descripción**: Obtener perfil del usuario autenticado
 **Headers**: Authorization: Bearer {token}
 **Response**: Datos del perfil del usuario
 
 #### PUT /users/profile
+
 **Descripción**: Actualizar perfil del usuario
 **Headers**: Authorization: Bearer {token}
 **Body**:
+
 ```json
 {
   "nombre": "string",
@@ -779,9 +846,11 @@ http://localhost:3000/api/v1
   "ciudad": "string"
 }
 ```
+
 **Response**: Perfil actualizado
 
 #### POST /users/upload-avatar
+
 **Descripción**: Subir foto de perfil
 **Headers**: Authorization: Bearer {token}
 **Body**: FormData con archivo de imagen
@@ -790,8 +859,10 @@ http://localhost:3000/api/v1
 ### Endpoints de Cursos
 
 #### GET /courses
+
 **Descripción**: Listar cursos públicos con filtros
 **Query Parameters**:
+
 - `page`: Número de página (default: 1)
 - `limit`: Elementos por página (default: 12)
 - `categoria`: Filtrar por categoría
@@ -804,13 +875,16 @@ http://localhost:3000/api/v1
 **Response**: Lista paginada de cursos
 
 #### GET /courses/:id
+
 **Descripción**: Obtener detalles de un curso específico
 **Response**: Detalles completos del curso + contenido gratuito
 
 #### POST /courses
+
 **Descripción**: Crear nuevo curso (solo instructores)
 **Headers**: Authorization: Bearer {token}
 **Body**:
+
 ```json
 {
   "titulo": "string",
@@ -823,15 +897,18 @@ http://localhost:3000/api/v1
   "objetivos": ["string"]
 }
 ```
+
 **Response**: Curso creado
 
 #### PUT /courses/:id
+
 **Descripción**: Actualizar curso (solo propietario)
 **Headers**: Authorization: Bearer {token}
 **Body**: Campos a actualizar
 **Response**: Curso actualizado
 
 #### DELETE /courses/:id
+
 **Descripción**: Eliminar curso (solo propietario)
 **Headers**: Authorization: Bearer {token}
 **Response**: Confirmación de eliminación
@@ -839,14 +916,17 @@ http://localhost:3000/api/v1
 ### Endpoints de Contenido de Cursos
 
 #### GET /courses/:courseId/content
+
 **Descripción**: Listar contenido de un curso
 **Headers**: Authorization: Bearer {token}
 **Response**: Lista ordenada de contenido del curso
 
 #### POST /courses/:courseId/content
+
 **Descripción**: Agregar contenido a un curso (solo propietario)
 **Headers**: Authorization: Bearer {token}
 **Body**:
+
 ```json
 {
   "titulo": "string",
@@ -860,17 +940,21 @@ http://localhost:3000/api/v1
   }
 }
 ```
+
 **Response**: Contenido creado
 
 #### GET /content/:id
+
 **Descripción**: Obtener contenido específico (solo estudiantes inscritos)
 **Headers**: Authorization: Bearer {token}
 **Response**: Detalles del contenido
 
 #### PUT /content/:id/progress
+
 **Descripción**: Actualizar progreso de contenido
 **Headers**: Authorization: Bearer {token}
 **Body**:
+
 ```json
 {
   "completado": "boolean",
@@ -878,25 +962,31 @@ http://localhost:3000/api/v1
   "notas_estudiante": "string"
 }
 ```
+
 **Response**: Progreso actualizado
 
 ### Endpoints de Inscripciones
 
 #### POST /enrollments
+
 **Descripción**: Inscribirse a un curso
 **Headers**: Authorization: Bearer {token}
 **Body**:
+
 ```json
 {
   "curso_id": "string"
 }
 ```
+
 **Response**: Inscripción creada
 
 #### GET /enrollments/my-courses
+
 **Descripción**: Obtener cursos del estudiante
 **Headers**: Authorization: Bearer {token}
 **Query Parameters**:
+
 - `estado`: Filtrar por estado (activo, completado, abandonado)
 - `page`: Número de página
 - `limit`: Elementos por página
@@ -904,6 +994,7 @@ http://localhost:3000/api/v1
 **Response**: Lista de cursos inscritos con progreso
 
 #### GET /enrollments/:courseId/progress
+
 **Descripción**: Obtener progreso detallado de un curso
 **Headers**: Authorization: Bearer {token}
 **Response**: Progreso completo del curso
@@ -911,19 +1002,23 @@ http://localhost:3000/api/v1
 ### Endpoints de Quizzes
 
 #### GET /courses/:courseId/quizzes
+
 **Descripción**: Listar quizzes de un curso
 **Headers**: Authorization: Bearer {token}
 **Response**: Lista de quizzes del curso
 
 #### POST /quizzes/:id/attempt
+
 **Descripción**: Iniciar intento de quiz
 **Headers**: Authorization: Bearer {token}
 **Response**: Preguntas del quiz
 
 #### POST /quizzes/:id/submit
+
 **Descripción**: Enviar respuestas del quiz
 **Headers**: Authorization: Bearer {token}
 **Body**:
+
 ```json
 {
   "respuestas": [
@@ -934,35 +1029,43 @@ http://localhost:3000/api/v1
   ]
 }
 ```
+
 **Response**: Resultado del quiz con puntuación
 
 ### Endpoints de Pagos
 
 #### POST /payments/create-intent
+
 **Descripción**: Crear intención de pago
 **Headers**: Authorization: Bearer {token}
 **Body**:
+
 ```json
 {
   "curso_id": "string",
   "metodo_pago": "stripe|paypal"
 }
 ```
+
 **Response**: Client secret para completar pago
 
 #### POST /payments/confirm
+
 **Descripción**: Confirmar pago completado
 **Headers**: Authorization: Bearer {token}
 **Body**:
+
 ```json
 {
   "payment_intent_id": "string",
   "curso_id": "string"
 }
 ```
+
 **Response**: Confirmación de pago e inscripción
 
 #### GET /payments/history
+
 **Descripción**: Historial de pagos del usuario
 **Headers**: Authorization: Bearer {token}
 **Response**: Lista de pagos realizados
@@ -970,14 +1073,17 @@ http://localhost:3000/api/v1
 ### Endpoints de Administración
 
 #### GET /admin/dashboard
+
 **Descripción**: Obtener estadísticas del panel administrativo
 **Headers**: Authorization: Bearer {token}
 **Response**: Métricas generales de la plataforma
 
 #### GET /admin/users
+
 **Descripción**: Listar usuarios (solo admin)
 **Headers**: Authorization: Bearer {token}
 **Query Parameters**:
+
 - `rol`: Filtrar por rol
 - `estado`: Filtrar por estado
 - `page`: Número de página
@@ -986,30 +1092,37 @@ http://localhost:3000/api/v1
 **Response**: Lista paginada de usuarios
 
 #### PUT /admin/users/:id/status
+
 **Descripción**: Cambiar estado de usuario (solo admin)
 **Headers**: Authorization: Bearer {token}
 **Body**:
+
 ```json
 {
   "estado": "activo|inactivo|suspendido"
 }
 ```
+
 **Response**: Usuario con estado actualizado
 
 #### GET /admin/courses/pending
+
 **Descripción**: Listar cursos pendientes de aprobación
 **Headers**: Authorization: Bearer {token}
 **Response**: Lista de cursos en estado borrador
 
 #### PUT /admin/courses/:id/approve
+
 **Descripción**: Aprobar curso para publicación
 **Headers**: Authorization: Bearer {token}
 **Response**: Curso aprobado
 
 #### GET /admin/reports/revenue
+
 **Descripción**: Reporte de ingresos
 **Headers**: Authorization: Bearer {token}
 **Query Parameters**:
+
 - `fecha_inicio`: Fecha de inicio
 - `fecha_fin`: Fecha de fin
 - `periodo`: daily, weekly, monthly
@@ -1021,18 +1134,21 @@ http://localhost:3000/api/v1
 ### Principios de Diseño para E-Learning
 
 #### Enfoque en el Aprendizaje
+
 - **Claridad Visual**: Diseño limpio que no distraiga del contenido educativo
 - **Jerarquía de Información**: Estructura clara que guíe al estudiante
 - **Accesibilidad**: Cumplimiento de estándares WCAG 2.1 AA
 - **Consistencia**: Patrones de diseño uniformes en toda la plataforma
 
 #### Experiencia de Usuario Optimizada
+
 - **Navegación Intuitiva**: Menús claros y breadcrumbs para orientación
 - **Progreso Visual**: Indicadores de progreso claros y motivadores
 - **Responsive Design**: Experiencia óptima en dispositivos móviles y desktop
 - **Carga Rápida**: Optimización para conexiones lentas
 
 #### Paleta de Colores y Tipografía
+
 - **Colores Primarios**: Azul (#2563eb) para elementos principales
 - **Colores Secundarios**: Verde (#16a34a) para éxito, Rojo (#dc2626) para errores
 - **Colores Neutros**: Grises para texto y fondos
@@ -1041,7 +1157,9 @@ http://localhost:3000/api/v1
 ### Estructura de Páginas Principales
 
 #### Página de Inicio (Landing)
+
 **Componentes**:
+
 - Header con logo, navegación y perfil de usuario
 - Hero section con cursos destacados
 - Categorías de cursos populares
@@ -1050,7 +1168,9 @@ http://localhost:3000/api/v1
 - Footer con enlaces útiles y información legal
 
 #### Catálogo de Cursos
+
 **Funcionalidades**:
+
 - **Filtros Laterales**: Por categoría, nivel, duración, precio, instructor
 - **Vista de Cursos**: Grid responsivo con imágenes, títulos y ratings
 - **Ordenamiento**: Por popularidad, fecha, precio, rating
@@ -1058,7 +1178,9 @@ http://localhost:3000/api/v1
 - **Búsqueda**: Barra de búsqueda con sugerencias automáticas
 
 #### Página de Curso Individual
+
 **Elementos Clave**:
+
 - **Video de Presentación**: Trailer del curso con controles personalizados
 - **Información Detallada**: Precio, descripción, objetivos de aprendizaje
 - **Contenido del Curso**: Lista de módulos y lecciones
@@ -1067,7 +1189,9 @@ http://localhost:3000/api/v1
 - **Reseñas y Ratings**: Feedback de estudiantes anteriores
 
 #### Panel de Aprendizaje
+
 **Características**:
+
 - **Progreso Visual**: Barra de progreso del curso y módulos
 - **Reproductor de Video**: Controles avanzados, velocidad, subtítulos
 - **Navegación de Contenido**: Sidebar con lista de lecciones
@@ -1075,7 +1199,9 @@ http://localhost:3000/api/v1
 - **Recursos Descargables**: Materiales complementarios
 
 #### Proceso de Inscripción
+
 **Pasos Optimizados**:
+
 1. **Selección de Curso**: Vista previa y detalles
 2. **Información de Pago**: Métodos de pago seguros
 3. **Confirmación**: Resumen antes de procesar
@@ -1083,7 +1209,9 @@ http://localhost:3000/api/v1
 5. **Confirmación por Email**: Recibo y acceso al curso
 
 #### Panel Administrativo
+
 **Secciones Principales**:
+
 - **Dashboard**: Métricas de estudiantes, cursos populares, ingresos
 - **Gestión de Cursos**: CRUD completo con subida de videos
 - **Gestión de Usuarios**: Lista, filtros, cambio de estados
@@ -1094,6 +1222,7 @@ http://localhost:3000/api/v1
 ### Componentes de UI Especializados
 
 #### Componentes para E-Learning
+
 - **CourseCard**: Tarjeta de curso con imagen, título, instructor y rating
 - **VideoPlayer**: Reproductor personalizado con controles avanzados
 - **ProgressBar**: Barra de progreso visual para cursos y lecciones
@@ -1102,6 +1231,7 @@ http://localhost:3000/api/v1
 - **EnrollmentButton**: Botón de inscripción con estados dinámicos
 
 #### Componentes Educativos Específicos
+
 - **LessonList**: Lista navegable de lecciones con estado de progreso
 - **NoteTaking**: Editor de notas integrado con el reproductor
 - **CertificateDisplay**: Visualización de certificados de finalización
@@ -1110,6 +1240,7 @@ http://localhost:3000/api/v1
 - **InstructorProfile**: Perfil compacto del instructor con información relevante
 
 #### Componentes Base Reutilizables
+
 - **Button**: Variantes modernas (primary azul, secondary gris, success verde)
 - **Input**: Campos con validación y estilos educativos
 - **Modal**: Ventanas modales para confirmaciones y detalles
@@ -1120,6 +1251,7 @@ http://localhost:3000/api/v1
 ### Responsive Design para E-Learning
 
 #### Breakpoints Optimizados
+
 - **Mobile**: 320px - 768px (enfoque en aprendizaje móvil)
 - **Tablet**: 768px - 1024px (balance entre móvil y desktop)
 - **Desktop**: 1024px+ (experiencia completa de aprendizaje)
@@ -1127,6 +1259,7 @@ http://localhost:3000/api/v1
 #### Adaptaciones por Dispositivo
 
 ##### Mobile (320px - 768px)
+
 - **Navegación**: Menú hamburguesa con categorías de cursos
 - **Cursos**: Vista de lista con imágenes y progreso
 - **Video Player**: Reproductor optimizado para pantalla pequeña
@@ -1134,6 +1267,7 @@ http://localhost:3000/api/v1
 - **Quizzes**: Interfaz simplificada para respuestas táctiles
 
 ##### Tablet (768px - 1024px)
+
 - **Cursos**: Grid de 2-3 columnas
 - **Filtros**: Panel lateral colapsable
 - **Navegación**: Menú horizontal con dropdowns
@@ -1141,6 +1275,7 @@ http://localhost:3000/api/v1
 - **Admin**: Interfaz adaptada con navegación por tabs
 
 ##### Desktop (1024px+)
+
 - **Cursos**: Grid de 3-4 columnas con hover effects
 - **Filtros**: Panel lateral fijo
 - **Navegación**: Menú horizontal completo
@@ -1150,6 +1285,7 @@ http://localhost:3000/api/v1
 ### Consideraciones Específicas para E-Learning
 
 #### Gestión de Contenido Multimedia
+
 - **Calidad de Video**: Mínimo 1080p para contenido educativo
 - **Múltiples Formatos**: MP4, WebM para compatibilidad universal
 - **Subtítulos**: Soporte para múltiples idiomas y accesibilidad
@@ -1157,6 +1293,7 @@ http://localhost:3000/api/v1
 - **Streaming**: Entrega adaptativa según ancho de banda
 
 #### Experiencia de Aprendizaje
+
 - **Progreso Visual**: Indicadores claros de avance en cursos y lecciones
 - **Interactividad**: Quizzes, ejercicios prácticos y evaluaciones
 - **Certificaciones**: Generación automática de certificados de finalización
@@ -1168,12 +1305,14 @@ http://localhost:3000/api/v1
 ### Enfoque de Desarrollo para E-Learning
 
 #### Metodología Ágil Adaptada
+
 - **Framework**: Scrum con sprints de 2 semanas enfocados en funcionalidades educativas
 - **Roles**: Product Owner (educador), Scrum Master, Full-Stack Developer, UI/UX Designer
 - **Ceremonias**: Daily standups, sprint planning con enfoque en experiencia de aprendizaje, retrospectives
 - **Herramientas**: Jira para backlog educativo, Figma para diseño de interfaces
 
 #### Desarrollo Iterativo para E-Learning
+
 - **MVP (Minimum Viable Product)**: Catálogo de cursos + reproductor de video + sistema de inscripción
 - **Incrementos**: Funcionalidades por prioridad educativa (quizzes, certificados, reportes)
 - **Feedback continuo**: Validación con estudiantes e instructores reales
@@ -1182,7 +1321,9 @@ http://localhost:3000/api/v1
 ### Fases de Implementación de la Plataforma E-Learning
 
 #### Fase 1 - Fundación de la Plataforma (5-6 semanas)
+
 **Objetivos**:
+
 - Sistema de autenticación para estudiantes, instructores y administradores
 - Modelos de base de datos para cursos, usuarios y contenido
 - API REST para catálogo de cursos
@@ -1190,6 +1331,7 @@ http://localhost:3000/api/v1
 - Sistema de gestión de videos y archivos multimedia
 
 **Entregables**:
+
 - Backend Node.js con modelos de MongoDB (User, Course, Content, etc.)
 - API REST para cursos por categoría
 - Frontend React con catálogo responsivo
@@ -1197,12 +1339,15 @@ http://localhost:3000/api/v1
 - Subida y gestión de videos y materiales
 
 **Criterios de Aceptación**:
+
 - Usuarios pueden navegar por categorías de cursos
 - Cursos se muestran con videos de presentación y descripciones
 - Instructores pueden crear cursos básicos
 
 #### Fase 2 - Funcionalidades de Aprendizaje (4-5 semanas)
+
 **Objetivos**:
+
 - Sistema de inscripción a cursos
 - Reproductor de video avanzado
 - Seguimiento de progreso
@@ -1210,6 +1355,7 @@ http://localhost:3000/api/v1
 - Filtros y búsqueda de cursos
 
 **Entregables**:
+
 - Sistema de inscripción con pagos
 - Reproductor de video con controles personalizados
 - Tracking de progreso por lección
@@ -1217,13 +1363,16 @@ http://localhost:3000/api/v1
 - Filtros por categoría, nivel, precio
 
 **Criterios de Aceptación**:
+
 - Estudiantes pueden inscribirse y acceder a cursos
 - Videos se reproducen correctamente en todos los dispositivos
 - Progreso se guarda automáticamente
 - Quizzes funcionan correctamente
 
 #### Fase 3 - Panel Administrativo e Instructor (3-4 semanas)
+
 **Objetivos**:
+
 - Dashboard administrativo completo
 - Panel para instructores
 - Gestión avanzada de cursos
@@ -1231,6 +1380,7 @@ http://localhost:3000/api/v1
 - Sistema de roles y permisos
 
 **Entregables**:
+
 - Panel admin React con métricas
 - Panel instructor para gestión de cursos
 - CRUD completo de cursos con videos
@@ -1238,13 +1388,16 @@ http://localhost:3000/api/v1
 - Sistema de roles (admin, instructor, estudiante)
 
 **Criterios de Aceptación**:
+
 - Instructores pueden gestionar sus cursos completamente
 - Administradores tienen visibilidad total de la plataforma
 - Reportes muestran métricas educativas precisas
 - Interfaces son intuitivas para cada rol
 
 #### Fase 4 - Características Avanzadas de Aprendizaje (3-4 semanas)
+
 **Objetivos**:
+
 - Sistema de certificados
 - Funcionalidades sociales básicas
 - Optimización de rendimiento
@@ -1252,6 +1405,7 @@ http://localhost:3000/api/v1
 - Integración de analytics educativos
 
 **Entregables**:
+
 - Generación automática de certificados
 - Sistema de comentarios y discusiones
 - Optimización de streaming de video
@@ -1259,13 +1413,16 @@ http://localhost:3000/api/v1
 - Analytics de aprendizaje integrado
 
 **Criterios de Aceptación**:
+
 - Certificados se generan automáticamente al completar cursos
 - Estudiantes pueden interactuar en discusiones
 - Videos cargan rápidamente con calidad adaptativa
 - Analytics captura métricas de aprendizaje
 
 #### Fase 5 - Testing y Lanzamiento (2-3 semanas)
+
 **Objetivos**:
+
 - Testing exhaustivo de funcionalidades educativas
 - Pruebas de carga con múltiples usuarios
 - Documentación completa
@@ -1273,6 +1430,7 @@ http://localhost:3000/api/v1
 - Capacitación de instructores
 
 **Entregables**:
+
 - Suite de tests automatizados (unitarios, integración, E2E)
 - Documentación técnica y de usuario
 - Configuración de producción
@@ -1280,6 +1438,7 @@ http://localhost:3000/api/v1
 - Plan de mantenimiento
 
 **Criterios de Aceptación**:
+
 - Cobertura de tests > 80%
 - Plataforma soporta múltiples usuarios simultáneos
 - Documentación está completa
@@ -1288,6 +1447,7 @@ http://localhost:3000/api/v1
 ### Estándares de Desarrollo para E-Learning
 
 #### Backend (Node.js + Express)
+
 - **Estructura**: Arquitectura modular por funcionalidad educativa (auth, courses, content, quizzes)
 - **Naming**: camelCase para variables y funciones, PascalCase para clases y modelos
 - **Documentación**: JSDoc en español para controladores y servicios
@@ -1296,6 +1456,7 @@ http://localhost:3000/api/v1
 - **Seguridad**: Validación con Joi, sanitización de datos y rate limiting
 
 #### Frontend (React)
+
 - **Estructura**: Componentes funcionales con hooks personalizados para aprendizaje
 - **Naming**: PascalCase para componentes, camelCase para funciones
 - **Estilos**: CSS Modules + Styled Components para componentes educativos
@@ -1304,6 +1465,7 @@ http://localhost:3000/api/v1
 - **Optimización**: Code splitting por rutas y lazy loading de contenido multimedia
 
 #### Base de Datos (MongoDB)
+
 - **Naming**: camelCase para campos y colecciones
 - **Esquemas**: Mongoose schemas con validaciones estrictas
 - **Backup**: Estrategia de respaldo diario automático con MongoDB Atlas
@@ -1311,6 +1473,7 @@ http://localhost:3000/api/v1
 - **Seguridad**: Encriptación de datos sensibles y logs de auditoría
 
 #### Gestión de Contenido Multimedia
+
 - **Formato**: MP4 para videos, PDF para documentos, JPEG/PNG para imágenes
 - **Calidades**: Múltiples resoluciones de video (480p, 720p, 1080p)
 - **Almacenamiento**: AWS S3 con CloudFront CDN para distribución global
@@ -1322,6 +1485,7 @@ http://localhost:3000/api/v1
 ### Estrategia de Testing para E-Learning
 
 #### Niveles de Testing Específicos
+
 1. **Unit Testing**: Modelos de cursos, cálculos de progreso, validaciones de contenido
 2. **Integration Testing**: APIs de cursos, inscripciones, progreso y evaluaciones
 3. **System Testing**: Flujo completo de aprendizaje y gestión educativa
@@ -1330,6 +1494,7 @@ http://localhost:3000/api/v1
 6. **Performance Testing**: Streaming de videos y respuesta bajo múltiples usuarios
 
 #### Herramientas de Testing para E-Learning
+
 - **Backend**: Jest + Supertest para APIs de Node.js
 - **Frontend**: Jest + React Testing Library + Testing Library User Events
 - **E2E**: Cypress con escenarios de aprendizaje completos
@@ -1340,6 +1505,7 @@ http://localhost:3000/api/v1
 ### Casos de Prueba Específicos para E-Learning
 
 #### Autenticación y Usuarios
+
 - **Registro de estudiante**: Validación de email, contraseña segura, datos académicos
 - **Registro de instructor**: Validación adicional de credenciales y experiencia
 - **Login multi-rol**: Credenciales correctas/incorrectas, roles diferenciados
@@ -1348,6 +1514,7 @@ http://localhost:3000/api/v1
 - **Persistencia de sesión**: Mantener progreso entre sesiones
 
 #### Catálogo de Cursos
+
 - **Visualización por categorías**: Programación, diseño, marketing, idiomas, etc.
 - **Filtros específicos**: Por nivel (principiante, intermedio, avanzado), duración, precio, idioma
 - **Búsqueda de cursos**: Por título, instructor, descripción, etiquetas
@@ -1356,6 +1523,7 @@ http://localhost:3000/api/v1
 - **Disponibilidad de cursos**: Cursos activos, próximos lanzamientos, cupos limitados
 
 #### Proceso de Inscripción
+
 - **Inscripción a cursos**: Validación de prerrequisitos, métodos de pago
 - **Cursos gratuitos vs pagos**: Flujos diferenciados de inscripción
 - **Confirmación de inscripción**: Resumen del curso, términos y condiciones
@@ -1364,6 +1532,7 @@ http://localhost:3000/api/v1
 - **Actualización de cupos**: Reducción automática de plazas disponibles
 
 #### Experiencia de Aprendizaje
+
 - **Reproducción de videos**: Calidad adaptativa, controles de velocidad, subtítulos
 - **Progreso del curso**: Marcado automático de lecciones completadas
 - **Toma de notas**: Crear, editar, eliminar notas durante las lecciones
@@ -1372,6 +1541,7 @@ http://localhost:3000/api/v1
 - **Marcadores**: Guardar momentos específicos en videos para revisión
 
 #### Sistema de Evaluaciones
+
 - **Quizzes interactivos**: Múltiple opción, verdadero/falso, respuesta abierta
 - **Calificación automática**: Feedback inmediato, explicaciones de respuestas
 - **Intentos múltiples**: Límites de intentos, mejores calificaciones
@@ -1379,6 +1549,7 @@ http://localhost:3000/api/v1
 - **Progreso de evaluaciones**: Tracking de calificaciones y mejoras
 
 #### Panel de Instructor
+
 - **Creación de cursos**: CRUD completo con validaciones específicas
 - **Subida de contenido**: Videos, documentos, límites de tamaño, formatos soportados
 - **Gestión de estudiantes**: Lista de inscritos, progreso individual, comunicación
@@ -1387,6 +1558,7 @@ http://localhost:3000/api/v1
 - **Moderación**: Responder preguntas, moderar discusiones
 
 #### Funcionalidades Específicas de E-Learning
+
 - **Certificaciones**: Generación y verificación de certificados de completación
 - **Gamificación**: Badges, puntos, logros por progreso y participación
 - **Foros de discusión**: Preguntas y respuestas, interacción entre estudiantes
@@ -1396,6 +1568,7 @@ http://localhost:3000/api/v1
 ### Casos de Prueba de Seguridad
 
 #### Protección de Datos Educativos
+
 - **Validación de entrada**: NoSQL injection, XSS, CSRF protection
 - **Autenticación segura**: Hashing de contraseñas con bcrypt, JWT tokens seguros
 - **Datos sensibles**: Encriptación de información de pago y datos académicos
@@ -1403,6 +1576,7 @@ http://localhost:3000/api/v1
 - **Logs de auditoría**: Registro de acciones administrativas y progreso académico
 
 #### Transacciones Educativas Seguras
+
 - **Validación de pagos**: Verificación de datos de tarjetas para cursos premium
 - **Prevención de fraude**: Detección de patrones sospechosos en inscripciones
 - **Backup de datos**: Integridad de información de progreso y certificaciones
@@ -1411,6 +1585,7 @@ http://localhost:3000/api/v1
 ### Métricas de Calidad para E-Learning
 
 #### Cobertura de Código
+
 - **Objetivo General**: Mínimo 85% de cobertura
 - **Modelos de Mongoose**: 95% en validaciones y métodos de negocio
 - **APIs REST**: 90% en endpoints críticos (cursos, inscripciones, progreso)
@@ -1418,6 +1593,7 @@ http://localhost:3000/api/v1
 - **Funciones de utilidad**: 95% en cálculos de progreso y validaciones
 
 #### Performance de E-Learning
+
 - **Tiempo de carga inicial**: < 2 segundos en conexión 4G
 - **Streaming de videos**: < 3 segundos para iniciar reproducción
 - **Time to Interactive**: < 3 segundos en páginas de curso
@@ -1425,6 +1601,7 @@ http://localhost:3000/api/v1
 - **Core Web Vitals**: LCP < 2.5s, FID < 100ms, CLS < 0.1
 
 #### Métricas de Engagement Educativo
+
 - **Tasa de completación de cursos**: > 60% (benchmark de e-learning)
 - **Tiempo promedio de sesión**: > 15 minutos por sesión de estudio
 - **Errores de reproducción**: < 1% de fallos en streaming de video
@@ -1434,26 +1611,31 @@ http://localhost:3000/api/v1
 ### Plan de Ejecución de Testing
 
 #### Fase de Testing Unitario (Semana 1-2)
+
 - Modelos de cursos y validaciones
 - Cálculos de progreso y calificaciones
 - Funciones de utilidad y helpers educativos
 
 #### Fase de Testing de Integración (Semana 3-4)
+
 - APIs de cursos y búsqueda
 - Flujo de inscripción y progreso
 - Integración con sistema de pagos para cursos premium
 
 #### Fase de Testing E2E (Semana 5-6)
+
 - Flujos completos de aprendizaje
 - Gestión administrativa educativa
 - Escenarios de error y recuperación
 
 #### Fase de Testing de Performance (Semana 7)
+
 - Pruebas de carga con múltiples estudiantes
 - Optimización de streaming de video
 - Métricas de Core Web Vitals
 
 #### Fase de Testing de Seguridad (Semana 8)
+
 - Auditoría de seguridad completa
 - Pruebas de penetración básicas
 - Validación de cumplimiento de estándares educativos
@@ -1463,6 +1645,7 @@ http://localhost:3000/api/v1
 ### Autenticación y Autorización para E-Learning
 
 #### Autenticación de Usuarios
+
 - **JWT Authentication**: Tokens seguros con refresh tokens
 - **Sesiones seguras**: JWT con httpOnly cookies y secure flags
 - **Autenticación de dos factores**: Para instructores y administradores
@@ -1470,6 +1653,7 @@ http://localhost:3000/api/v1
 - **Bloqueo de cuentas**: Protección contra ataques de fuerza bruta
 
 #### Control de Acceso por Roles
+
 - **Estudiante**: Acceso a cursos inscritos, progreso, certificados
 - **Instructor**: Gestión de cursos propios, estudiantes, contenido
 - **Administrador**: Gestión completa de plataforma, usuarios y contenido
@@ -1477,6 +1661,7 @@ http://localhost:3000/api/v1
 - **Permisos granulares**: Middleware personalizado para acciones específicas
 
 #### Protección de Sesiones
+
 - **Timeout automático**: Sesiones expiran después de inactividad
 - **Invalidación**: Logout invalida tokens en todos los dispositivos
 - **Detección de anomalías**: Alertas por accesos desde ubicaciones inusuales
@@ -1484,6 +1669,7 @@ http://localhost:3000/api/v1
 ### Protección de Datos Sensibles
 
 #### Información de Estudiantes
+
 - **Datos personales**: Encriptación de información sensible (direcciones, teléfonos)
 - **Historial académico**: Protección de progreso y calificaciones
 - **Preferencias de aprendizaje**: Encriptación de configuraciones personales
@@ -1491,12 +1677,14 @@ http://localhost:3000/api/v1
 - **Anonimización**: Datos estadísticos sin información identificable
 
 #### Información de Contenido Educativo
+
 - **Material protegido**: Protección de videos y documentos con DRM
 - **Certificaciones**: Protección de certificados y credenciales
 - **Propiedad intelectual**: Protección de contenido de instructores
 - **Evaluaciones**: Encriptación de preguntas y respuestas de quizzes
 
 #### Validación de Entrada Específica
+
 - **Sanitización de búsquedas**: Prevención de NoSQL injection en filtros
 - **Validación de contenido**: Verificación de formatos multimedia
 - **Subida de archivos**: Validación de tipos de archivo y contenido educativo
@@ -1506,6 +1694,7 @@ http://localhost:3000/api/v1
 ### Seguridad en Transacciones Educativas
 
 #### Procesamiento de Pagos para Cursos
+
 - **PCI DSS Compliance**: Cumplimiento de estándares de seguridad de pagos
 - **Tokenización**: No almacenar datos de tarjetas directamente
 - **Validación de tarjetas**: Verificación de CVV y datos de facturación
@@ -1513,6 +1702,7 @@ http://localhost:3000/api/v1
 - **Logs de transacciones**: Auditoría completa sin datos sensibles
 
 #### Protección de Inscripciones
+
 - **Integridad de datos**: Verificación de precios y cursos
 - **Estados seguros**: Transiciones controladas de estados de inscripción
 - **Cancelaciones**: Proceso seguro para reembolsos educativos
@@ -1521,12 +1711,14 @@ http://localhost:3000/api/v1
 ### Comunicación Segura
 
 #### HTTPS y Certificados
+
 - **SSL/TLS**: Certificados válidos para todos los dominios
 - **HSTS**: Strict Transport Security para forzar HTTPS
 - **Certificate Pinning**: Protección contra ataques man-in-the-middle
 - **Perfect Forward Secrecy**: Configuración de cifrado avanzado
 
 #### Headers de Seguridad
+
 - **CSP**: Content Security Policy estricto para prevenir XSS en contenido educativo
 - **X-Frame-Options**: Protección contra clickjacking en videos embebidos
 - **X-Content-Type-Options**: Prevención de MIME sniffing en archivos multimedia
@@ -1534,6 +1726,7 @@ http://localhost:3000/api/v1
 - **Feature Policy**: Restricción de APIs del navegador para funciones educativas
 
 #### CORS para E-Learning
+
 - **Origins específicos**: Solo dominios autorizados para plataforma educativa
 - **Métodos limitados**: GET, POST, PUT, DELETE según necesidad educativa
 - **Headers controlados**: Authorization, Content-Type, X-Requested-With
@@ -1542,6 +1735,7 @@ http://localhost:3000/api/v1
 ### Seguridad de Infraestructura
 
 #### Base de Datos MongoDB
+
 - **Encriptación en reposo**: Datos educativos sensibles encriptados en MongoDB
 - **Conexiones seguras**: SSL/TLS para conexiones a base de datos
 - **Backup seguro**: Respaldos encriptados de progreso académico con rotación
@@ -1549,6 +1743,7 @@ http://localhost:3000/api/v1
 - **Auditoría**: Logs de acceso y modificaciones de datos educativos
 
 #### Servidor y Aplicación Node.js
+
 - **Firewall**: Configuración restrictiva de puertos y servicios
 - **Updates**: Parches de seguridad automáticos para dependencias npm
 - **Monitoring**: Detección de intrusiones y comportamientos anómalos
@@ -1556,6 +1751,7 @@ http://localhost:3000/api/v1
 - **Secrets management**: Variables de entorno seguras para JWT y APIs
 
 #### Gestión de Contenido Multimedia
+
 - **Validación de archivos**: Verificación de tipos MIME y contenido de videos
 - **Límites de tamaño**: Prevención de ataques DoS por archivos multimedia grandes
 - **Sanitización**: Limpieza de metadatos de videos y documentos
@@ -1565,6 +1761,7 @@ http://localhost:3000/api/v1
 ### Cumplimiento y Auditoría Educativa
 
 #### Regulaciones de E-Learning
+
 - **Ley de Protección de Datos Educativos**: Cumplimiento FERPA y GDPR
 - **Regulaciones educativas**: Normativas específicas para contenido educativo
 - **Certificaciones académicas**: Cumplimiento de estándares educativos
@@ -1572,6 +1769,7 @@ http://localhost:3000/api/v1
 - **Accesibilidad**: Cumplimiento WCAG para contenido educativo
 
 #### Auditoría y Monitoreo Educativo
+
 - **Logs de auditoría**: Registro de acciones críticas del sistema educativo
 - **Alertas de seguridad**: Notificaciones automáticas de eventos sospechosos
 - **Revisiones periódicas**: Auditorías de seguridad educativa trimestrales
@@ -1581,6 +1779,7 @@ http://localhost:3000/api/v1
 ### Plan de Respuesta a Incidentes Educativos
 
 #### Detección y Respuesta
+
 - **Monitoreo 24/7**: Alertas automáticas de eventos de seguridad educativa
 - **Escalación**: Procedimientos claros para diferentes tipos de incidentes
 - **Comunicación**: Protocolos para notificar a estudiantes, instructores y autoridades
@@ -1592,6 +1791,7 @@ http://localhost:3000/api/v1
 ### Equipo de Desarrollo Especializado
 
 #### Roles Necesarios para E-Learning
+
 - **Full Stack Developer** (1): Node.js + React, especialización en plataformas educativas
 - **Frontend Developer** (0.5): React especializado en UX educativa y multimedia
 - **UI/UX Designer** (0.75): Diseño específico para experiencias de aprendizaje
@@ -1601,6 +1801,7 @@ http://localhost:3000/api/v1
 - **Content Creator** (0.25): Producción de videos educativos y materiales
 
 #### Habilidades Específicas Requeridas
+
 - **Experiencia en E-Learning**: Conocimiento de flujos educativos y engagement
 - **Manejo de multimedia**: Optimización y gestión de videos y contenido educativo
 - **Seguridad de pagos**: Implementación de sistemas de pago para cursos
@@ -1610,24 +1811,29 @@ http://localhost:3000/api/v1
 #### Timeline Estimado por Fases
 
 ##### Fase 1 - Fundación (5-6 semanas)
+
 - **Backend Node.js**: 3 semanas
 - **Frontend básico**: 2 semanas
 - **Integración**: 1 semana
 
 ##### Fase 2 - Funcionalidades de Aprendizaje (4-5 semanas)
+
 - **Sistema de inscripciones**: 3 semanas
 - **Reproductor de video**: 2 semanas
 
 ##### Fase 3 - Panel de Instructor (3-4 semanas)
+
 - **Dashboard instructor**: 2 semanas
 - **Gestión de cursos**: 2 semanas
 
 ##### Fase 4 - Optimización (3-4 semanas)
+
 - **Performance de videos**: 1 semana
 - **Analytics educativos**: 1 semana
 - **Características avanzadas**: 2 semanas
 
 ##### Fase 5 - Testing y Lanzamiento (2-3 semanas)
+
 - **Testing exhaustivo**: 2 semanas
 - **Deployment**: 1 semana
 
@@ -1636,6 +1842,7 @@ http://localhost:3000/api/v1
 ### Infraestructura Técnica para E-Learning
 
 #### Entorno de Desarrollo
+
 - **Servidores locales**: Node.js development server
 - **Base de datos**: MongoDB local con datos de prueba educativos
 - **Herramientas**: VS Code, Git, Postman, MongoDB Compass
@@ -1643,6 +1850,7 @@ http://localhost:3000/api/v1
 - **Gestión de multimedia**: Sistema local de archivos para videos
 
 #### Entorno de Producción
+
 - **Hosting**: Cloud provider con alta disponibilidad (AWS/Google Cloud)
 - **Base de datos**: MongoDB Atlas gestionado con backups automáticos
 - **CDN**: AWS CloudFront para videos y contenido multimedia
@@ -1652,6 +1860,7 @@ http://localhost:3000/api/v1
 - **Storage**: AWS S3 para videos y materiales educativos
 
 #### Herramientas Específicas de E-Learning
+
 - **Analytics**: Google Analytics 4 con eventos educativos personalizados
 - **SEO**: Google Search Console, Screaming Frog para contenido educativo
 - **Performance**: Lighthouse, WebPageTest para optimización de videos
@@ -1661,6 +1870,7 @@ http://localhost:3000/api/v1
 ### Costos Estimados
 
 #### Desarrollo (5 meses)
+
 - **Full Stack Developer**: $5,000/mes × 5 = $25,000
 - **Frontend Developer**: $3,000/mes × 2.5 = $7,500
 - **UI/UX Designer**: $2,500/mes × 3.75 = $9,375
@@ -1671,6 +1881,7 @@ http://localhost:3000/api/v1
 - **Total Desarrollo**: $58,125
 
 #### Infraestructura y Servicios (primer año)
+
 - **Hosting cloud**: $150/mes × 12 = $1,800
 - **MongoDB Atlas**: $100/mes × 12 = $1,200
 - **CDN y storage para videos**: $200/mes × 12 = $2,400
@@ -1681,6 +1892,7 @@ http://localhost:3000/api/v1
 - **Total Infraestructura**: $7,880/año
 
 #### Herramientas y Licencias
+
 - **Diseño**: Adobe Creative Suite = $600/año
 - **Testing tools**: $200/año
 - **Security tools**: $300/año
@@ -1689,6 +1901,7 @@ http://localhost:3000/api/v1
 - **Total Herramientas**: $2,800/año
 
 #### Contenido y Marketing Inicial
+
 - **Producción de videos**: $5,000 (una vez)
 - **Contenido educativo inicial**: $3,000 (una vez)
 - **SEO educativo inicial**: $1,500 (una vez)
@@ -1697,6 +1910,7 @@ http://localhost:3000/api/v1
 ### Resumen de Inversión
 
 #### Inversión Inicial (Año 1)
+
 - **Desarrollo**: $58,125
 - **Infraestructura**: $7,880
 - **Herramientas**: $2,800
@@ -1704,6 +1918,7 @@ http://localhost:3000/api/v1
 - **Total Año 1**: $78,305
 
 #### Costos Operativos Anuales (Año 2+)
+
 - **Infraestructura**: $7,880
 - **Herramientas**: $2,800
 - **Mantenimiento**: $11,625 (20% del desarrollo)
@@ -1712,6 +1927,7 @@ http://localhost:3000/api/v1
 ### ROI y Justificación
 
 #### Proyección de Ingresos
+
 - **Cursos promedio**: 150 cursos en catálogo
 - **Precio promedio**: $80 por curso
 - **Conversión estimada**: 3-5% (benchmark e-learning)
@@ -1721,6 +1937,7 @@ http://localhost:3000/api/v1
 - **Ingresos anuales**: $230,400-$384,000
 
 #### Retorno de Inversión
+
 - **Inversión inicial**: $78,305
 - **Ingresos anuales conservadores**: $230,400
 - **ROI**: 294% en el primer año
@@ -1731,6 +1948,7 @@ http://localhost:3000/api/v1
 ### Viabilidad del Proyecto de Plataforma E-Learning
 
 #### Fortalezas del Diseño
+
 1. **Arquitectura especializada para e-learning** con Node.js y React
 2. **Stack tecnológico probado** específicamente para plataformas educativas
 3. **Seguridad robusta** implementada para transacciones y datos educativos
@@ -1740,6 +1958,7 @@ http://localhost:3000/api/v1
 7. **Sistema de progreso inteligente** con seguimiento y analytics en tiempo real
 
 #### Oportunidades de Mercado
+
 1. **Crecimiento del e-learning**: Mercado en expansión post-pandemia
 2. **Digitalización de la educación**: Oportunidad de modernización educativa
 3. **Personalización del aprendizaje**: Diferenciación competitiva
@@ -1747,6 +1966,7 @@ http://localhost:3000/api/v1
 5. **Mercado internacional**: Escalabilidad a múltiples países e idiomas
 
 #### Riesgos Identificados y Mitigación
+
 1. **Calidad de videos**: Inversión en producción profesional y streaming optimizado
 2. **Confianza del estudiante**: Implementación de certificados y testimonios de instructores
 3. **Competencia establecida**: Diferenciación a través de UX superior y especialización
@@ -1756,12 +1976,15 @@ http://localhost:3000/api/v1
 ### Recomendaciones de Implementación
 
 #### Estrategia de Lanzamiento por Fases
+
 1. **MVP (Meses 1-3)**: Catálogo de cursos + inscripciones + reproductor básico
+
    - Enfoque en funcionalidades core de e-learning
    - Testing exhaustivo de flujos de aprendizaje
    - Implementación de métricas básicas de engagement
 
 2. **Fase de Crecimiento (Meses 4-6)**: Panel de instructor + optimizaciones
+
    - Dashboard completo para gestión educativa
    - Optimización de performance de videos y SEO
    - Implementación de analytics educativos avanzados
@@ -1772,6 +1995,7 @@ http://localhost:3000/api/v1
    - Programa de certificaciones y gamificación
 
 #### Mejores Prácticas de E-Learning
+
 1. **Experiencia de aprendizaje**: Priorizar la facilidad de navegación y estudio
 2. **Optimización de engagement**: A/B testing continuo de elementos educativos
 3. **SEO educativo desde el inicio**: Estructura optimizada para contenido educativo
@@ -1781,24 +2005,27 @@ http://localhost:3000/api/v1
 ### Consideraciones Futuras y Escalabilidad
 
 #### Expansión Tecnológica
+
 1. **Aplicación móvil nativa**: PWA o app nativa para mejor experiencia de aprendizaje móvil
 2. **Realidad virtual**: Experiencias inmersivas de aprendizaje usando VR/AR
-3. **Inteligencia artificial**: 
+3. **Inteligencia artificial**:
    - Recomendaciones personalizadas basadas en progreso de aprendizaje
    - Chatbot educativo para soporte al estudiante
    - Análisis predictivo de rendimiento académico
 4. **Blockchain**: Certificación de credenciales y trazabilidad de logros educativos
 
 #### Expansión de Negocio
+
 1. **Marketplace educativo**: Permitir instructores externos (modelo B2B2C)
 2. **Suscripciones**: Modelo de acceso ilimitado por suscripción mensual
 3. **Personalización avanzada**: Rutas de aprendizaje personalizadas con IA
-4. **Servicios adicionales**: 
+4. **Servicios adicionales**:
    - Tutoría personalizada
    - Certificaciones oficiales
    - Servicios de mentoría y coaching
 
 #### Integraciones Estratégicas
+
 1. **Sistemas de pago**: PayPal, Stripe, pagos en cuotas, criptomonedas
 2. **Plataformas educativas**: Integración con LMS existentes y universidades
 3. **CRM educativo**: Sistemas de gestión de relaciones con estudiantes
@@ -1808,6 +2035,7 @@ http://localhost:3000/api/v1
 ### Métricas de Éxito y KPIs
 
 #### Métricas de E-Learning
+
 1. **Tasa de conversión**: Objetivo 3-5% (benchmark de plataformas educativas)
 2. **Precio promedio por curso**: $80-120 inicial, crecimiento a $150+
 3. **Tasa de abandono de inscripción**: Mantener bajo 60%
@@ -1815,6 +2043,7 @@ http://localhost:3000/api/v1
 5. **Retención de estudiantes**: 60% de estudiantes activos en 6 meses
 
 #### Métricas Técnicas
+
 1. **Performance**: Tiempo de carga de videos < 5 segundos
 2. **Disponibilidad**: 99.9% uptime
 3. **Seguridad**: 0 incidentes de seguridad críticos (FERPA compliance)
@@ -1824,9 +2053,11 @@ http://localhost:3000/api/v1
 ### Valor del Proyecto y ROI
 
 #### Propuesta de Valor
+
 Esta plataforma E-Learning representa una oportunidad única de combinar la calidad educativa y la accesibilidad del aprendizaje online con la conveniencia y alcance de las tecnologías modernas. El diseño propuesto establece una base tecnológica sólida que no solo satisface las necesidades actuales del sector educativo, sino que también proporciona la flexibilidad necesaria para evolucionar con las tendencias del mercado educativo y las expectativas de los estudiantes.
 
 #### Ventajas Competitivas
+
 1. **Experiencia de aprendizaje premium**: Diseño específico para educación online
 2. **Tecnología moderna**: Stack actualizado y escalable para multimedia
 3. **Seguridad de clase empresarial**: Protección de datos educativos (FERPA)
@@ -1834,6 +2065,7 @@ Esta plataforma E-Learning representa una oportunidad única de combinar la cali
 5. **Escalabilidad internacional**: Arquitectura preparada para crecimiento global
 
 #### Retorno de Inversión Proyectado
+
 - **Inversión inicial**: $78,305
 - **Ingresos anuales conservadores**: $230,400-345,600
 - **ROI del primer año**: 294-441%
@@ -1849,6 +2081,6 @@ La arquitectura propuesta no solo resuelve los desafíos inmediatos del sector e
 ---
 
 **Documento de Análisis y Diseño - Plataforma E-Learning**  
-*Versión: 2.0*  
-*Fecha: Enero 2025*  
-*Estado: Transformado para E-Learning - Aprobado para Implementación*
+_Versión: 2.0_  
+_Fecha: Enero 2025_  
+_Estado: Transformado para E-Learning - Aprobado para Implementación_
